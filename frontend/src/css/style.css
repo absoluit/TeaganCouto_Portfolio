@@ -1,0 +1,15 @@
+nav a {
+  text-decoration: none;
+  }
+
+ul {
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-left: 50px;
+  margin-right: 50px; 
+}
