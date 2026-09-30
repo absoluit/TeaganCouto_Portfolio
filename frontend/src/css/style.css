@@ -13,3 +13,46 @@ ul {
   margin-left: 50px;
   margin-right: 50px; 
 }
+
+.featuredProjectsContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.featuredProjectList {
+  display: block;
+  gap: 0.5rem;
+}
+
+.featuredProjectOption {
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  display: block;
+  margin-left: 6rem;
+  margin-top: 1rem;
+}
+
+.featuredProjectInfo {
+  max-width: 100%;
+  margin-right: 24rem;
+}
+
+.featuredProjectDetails {
+  text-align: left;
+  display: flex;
+  margin-left: 11rem;
+  margin-right:6rem;
+}
+
+.featuredProjectImage {
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+  /* margin-left: 20rem; */
+}
+
+.featuredProjectsTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+}
