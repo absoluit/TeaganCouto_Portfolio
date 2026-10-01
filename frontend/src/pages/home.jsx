@@ -9,19 +9,22 @@ const FeaturesProjects = [
     name: "Random Dice Game",
     description: "A simple luck based dice game",
     languages: "Java",
-    image: dicegame
+    image: dicegame,
+    link: "https://github.com/absoluit/COMP228_DiceGame"
   }, 
   {
     name: "Deck Builder Roguelike",
     description: "A deck builder roguelike game",
     languages: "HTML, CSS, JavaScript",
-    image: deckbuilder
+    image: deckbuilder,
+    link: "https://github.com/Rebeljoka/DeckBuilderGame"
   },
   {
     name: "First Project",
     description: "A simple introduction project",
     languages: "HTML",
-    image: allabtme
+    image: allabtme,
+    link: "https://github.com/absoluit/index.html-assignment"
   }
 ];
 
@@ -45,36 +48,30 @@ function Home () {
       </section>
 
       <section className="featuredProjects">
-        <h2 className="featuredProjectsTitle">Featured Projects</h2>
-        
-        <div className="featuredProjectsContainer">
-          <div className="featuredProjectsList">
-            {FeaturesProjects.map((project) => (
-              <button 
-                className="featuredProjectOption"
-                key={project.name}
-                onClick={() => setSelectedProject(project)}
-              >
-                {project.name}
-              </button>
-            ))}
-          </div>
+        <div className="featuredProjectsTitleContainer">
+          <h2 className="featuredProjectsTitle">Featured Projects</h2>
+        </div>
 
-          {selectedProject && (
-            <div className="featuredProjectDetails">
-              <div className="featuredProjectInfo">
-              <h3 className="featuredProjectName">{selectedProject.name}</h3>
-              <p className="featuredProjectDescription">{selectedProject.description}</p>
-              <p className="featuredProjectLanguages">{selectedProject.languages}</p>
-              </div>
-              
-              <img 
-                className="featuredProjectImage" 
-                src={selectedProject.image} 
-                alt={selectedProject.name} 
-                />
-            </div>
-          )}
+        <div className="featuredProjectsContainer">
+          {FeaturesProjects.map((project) => (
+            <article className="featuredProjectCard" key={project.name}>
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <img
+                className="featuredProjectImage"
+                src={project.image}
+                alt={project.name}
+              />
+
+              <h3 className="featuredProjectName">{project.name}</h3>
+              <p className="featuredProjectDescription">
+                {project.description}
+              </p>
+              <p className="featuredProjectLanguages">
+                {project.languages}
+              </p>
+              </a>
+            </article>
+          ))}
         </div>
       </section>
     </main>

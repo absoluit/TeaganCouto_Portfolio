@@ -1,12 +1,4 @@
 
-test {
-  bg: #E5DCC5 site background-color
-  #39304A 
-  #635C51
-  #7D7461
-  #B0A990 textbox color
-}
-
 
 body {
   background-color: #E5DCC5;
@@ -18,6 +10,11 @@ nav a {
   }
 
 a:visited {
+  text-decoration: none;
+  color: #333;
+}
+
+a {
   text-decoration: none;
   color: #333;
 }
@@ -50,10 +47,35 @@ li {
   margin-top: 2rem;
 }
 
-
 .featuredProjectsContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  margin: 0 6rem;
+}
+
+.featuredProjectCard {
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px solid #B0A990;
+  border-radius: 7px;
+  background-color: #B0A990;
+}
+
+.featuredProjectImage {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  margin: 0 0 1rem  ;
+}
+
+.featuredProjectName {
+  margin: 0.75rem 0;
+}
+
+.featuredProjectDescription,
+.featuredProjectLanguages {
+  margin: 0.5rem 0;
 }
 
 .featuredProjectList {
@@ -82,16 +104,10 @@ li {
   margin-right:6rem;
 }
 
-.featuredProjectImage {
-  width: 75%;
-  height: auto;
-  margin: 0;
-  margin-left: 12rem; 
-}
-
 .featuredProjectsTitle {
   text-align: center;
   margin-bottom: 2rem;
+  margin-top: 6rem;
 }
 
 .intro_tit {
@@ -100,6 +116,13 @@ li {
   margin-right: 6rem;
 }
 
+.introduction {
+  text-align: center;
+  border: 2px solid #B0A990;
+  border-radius: 7px;
+  background-color: #B0A990;
+  margin: 32px 96px;
+}
 .introImage {
   order: -1;
   width: auto;
@@ -110,6 +133,116 @@ li {
 
 .title_text {
   flex: 1;
-  max-width: 50%;
-  padding-left: 20rem;
+  max-width: 40%;
+  text-align: center;
+  padding-left: 7rem;
+}
+
+.about {
+  margin-top: 2rem;
+}
+
+.bio,
+.education {
+  margin: 0 6rem 4rem;
+}
+
+.bioContainer,
+.educationContainer {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem;
+  border: 2px solid #B0A990;
+  border-radius: 7px;
+  background-color: #B0A990;
+}
+
+.bioText,
+.educationText {
+  flex: 1;
+}
+
+.bioTitle,
+.educationTitle {
+  margin-bottom: 1rem;
+  margin-left: 6rem;
+  text-align: center;
+}
+
+.bioDescription,
+.educationDescription {
+  line-height: 1.6;
+  margin-left: 6rem;
+  text-align: center;
+}
+
+.bioImage,
+.educationImage {
+  flex: 0 0 35%;
+  text-align: center;
+}
+
+.portrait {
+  width: 100%;
+  max-width: twentyrem;
+  height: auto;
+}
+
+.centennialLogo {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+}
+
+.socialImages {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.socialImages img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+} 
+
+.education {
+  border-top: 1px solid #7D7461;
+  padding-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .bio,
+  .education {
+    margin: 0 2rem 3rem;
+  }
+
+.bioContainer,
+.educationContainer {
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  }
+
+.socialImages {
+  justify-content: center;
+  }
+
+.bioImage,
+.educationImage {
+  flex-basis: auto;
+}
+}
+
+.footerLine {
+  border: 0;
+  height: 1px;
+  background-color: #7D7461;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.footer {
+  text-align: center;
 }
