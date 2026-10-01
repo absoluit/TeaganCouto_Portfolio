@@ -1,18 +1,55 @@
+
+test {
+  bg: #E5DCC5 site background-color
+  #39304A 
+  #635C51
+  #7D7461
+  #B0A990 textbox color
+}
+
+
+body {
+  background-color: #E5DCC5;
+  color: #333;
+}
+
 nav a {
   text-decoration: none;
   }
+
+a:visited {
+  text-decoration: none;
+  color: #333;
+}
 
 ul {
   display: flex;
   text-transform: uppercase;
   align-items: center;
-  margin: 0;
   padding: 0;
   justify-content: space-between;
   list-style-type: none;
   margin-left: 50px;
   margin-right: 50px; 
 }
+
+li {
+  border:2px solid #B0A990;
+  border-radius: 7px;
+  background-color: #B0A990;
+}
+.nav_line {
+  border: 0;
+  height: 1px;
+  background-color: #7D7461;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.home {
+  margin-top: 2rem;
+}
+
 
 .featuredProjectsContainer {
   display: flex;
@@ -35,7 +72,7 @@ ul {
 
 .featuredProjectInfo {
   max-width: 100%;
-  margin-right: 24rem;
+  margin-right: 6rem;
 }
 
 .featuredProjectDetails {
@@ -46,13 +83,33 @@ ul {
 }
 
 .featuredProjectImage {
-  width: 100%;
+  width: 75%;
   height: auto;
-  margin-top: 0;
-  /* margin-left: 20rem; */
+  margin: 0;
+  margin-left: 12rem; 
 }
 
 .featuredProjectsTitle {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.intro_tit {
+  display: flex;
+  align-items: center;
+  margin-right: 6rem;
+}
+
+.introImage {
+  order: -1;
+  width: auto;
+  height: auto;
+  margin-left: 6rem;
+  margin-top: 2rem;
+}
+
+.title_text {
+  flex: 1;
+  max-width: 50%;
+  padding-left: 20rem;
 }

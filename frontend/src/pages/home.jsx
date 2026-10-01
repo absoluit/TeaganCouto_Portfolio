@@ -30,15 +30,19 @@ function Home () {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <>
-      <div className = "intro&photo">
-        <h2 className="introTitle">Hey!!!</h2>
-        <p className="introText">
-          What's going on! Before going any further, let me first thank you for checking me out!
-          Throughout this site, you will find a few of my <a href="/projects">projects</a> and some information <a href="about">about me</a>. I hope you enjoy your time here and feel free to <a href="/contact">reach out</a> to me if you have any questions or comments!
-        </p>
-        <img className="introPhoto" src={wave} alt="wave" />
-      </div>
+    <main className="home">
+      <section className="introduction">
+        <div className = "intro_tit">
+          <div className="title_text">
+          <h2 className="introTitle">Hey!!!</h2>
+          <p className="introText">
+            What's going on! Before going any further, let me first thank you for checking me out!
+            Throughout this site, you will find a few of my <a href="/projects">projects</a> and some information <a href="about">about me</a>. I hope you enjoy your time here and feel free to <a href="/contact">reach out</a> to me if you have any questions or comments!
+          </p>
+          </div>
+          <img className="introImage" src={wave} alt="wave" />
+        </div>
+      </section>
 
       <section className="featuredProjects">
         <h2 className="featuredProjectsTitle">Featured Projects</h2>
@@ -73,7 +77,7 @@ function Home () {
           )}
         </div>
       </section>
-    </>
+    </main>
   )
 }
 

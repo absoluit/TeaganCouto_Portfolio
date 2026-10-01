@@ -11,6 +11,7 @@ function Header() {
           <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
+      <hr className="nav_line" />
     </header>
   )
 }
