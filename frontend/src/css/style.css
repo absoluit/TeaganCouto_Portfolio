@@ -3,23 +3,77 @@ body {
   color: #333;
 }
 
-nav a {
-  text-decoration: none;
+.appShell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-a:visited {
-  text-decoration: none;
+.appShell > main {
+  flex: 1;
+}
+
+header {
+  padding: 1rem 2rem 0;
+}
+
+nav {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  border: 2px solid #b0a990;
+  border-radius: 7px;
+  background-color: #b0a990;
+  box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.12);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav li {
+  border: 0;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+nav a,
+nav a:visited {
+  display: block;
+  border-radius: 5px;
   color: #333;
+  font-weight: 700;
+  padding: 0.65rem 1rem;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background-color: #333;
+  color: #e5dcc5;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #333;
+}
+
+a:hover {
+  color: #6b7a8f;
 }
 
 ul {
   display: flex;
-  text-transform: uppercase;
   align-items: center;
   padding: 0;
   justify-content: space-between;
@@ -38,7 +92,7 @@ li {
   height: 1px;
   background-color: #7d7461;
   width: 100%;
-  margin: 20px 0;
+  margin: 1rem 0 0;
 }
 
 .home {
@@ -75,6 +129,27 @@ li {
   margin: 0.5rem 0;
 }
 
+.viewAllProjectsButtonContainer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.viewAllProjectsButton {
+  display: inline-block;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: #333;
+  color: #e5dcc5;
+  font-weight: 700;
+  padding: 0.85rem 1.25rem;
+}
+
+.viewAllProjectsButton:hover,
+.viewAllProjectsButton:focus-visible {
+  background-color: #e5dcc5;
+  color: #333;
+}
+
 .featuredProjectList {
   display: block;
   gap: 0.5rem;
@@ -104,13 +179,12 @@ li {
 .featuredProjectsTitle {
   text-align: center;
   margin-bottom: 2rem;
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 
 .intro_tit {
   display: flex;
   align-items: center;
-  margin-right: 6rem;
 }
 
 .introduction {
@@ -118,33 +192,22 @@ li {
   border: 2px solid #b0a990;
   border-radius: 7px;
   background-color: #b0a990;
-  margin: 32px 96px;
-}
-.introImage {
-  order: -1;
-  width: auto;
-  height: auto;
-  margin-left: 6rem;
-  margin-top: 2rem;
+  margin: 32px 420px;
 }
 
 .title_text {
   flex: 1;
-  max-width: 40%;
   text-align: center;
-  padding-left: 7rem;
-}
-
-.about {
-  margin-top: 2rem;
 }
 
 .bio,
+.skills,
 .education {
   margin: 0 6rem 4rem;
 }
 
 .bioContainer,
+.skillsContainer,
 .educationContainer {
   display: flex;
   align-items: center;
@@ -156,6 +219,7 @@ li {
 }
 
 .bioText,
+.skillsText,
 .educationText {
   flex: 1;
 }
@@ -172,6 +236,17 @@ li {
   line-height: 1.6;
   margin-left: 6rem;
   text-align: center;
+}
+
+.skillsTitle {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.skillsDescription {
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 6rem;
 }
 
 .bioImage,
@@ -210,12 +285,31 @@ li {
 }
 
 @media (max-width: 768px) {
+  header {
+    padding: 0.75rem 1rem 0;
+  }
+
+  nav {
+    padding: 0.5rem;
+  }
+
+  nav ul {
+    gap: 0.25rem;
+  }
+
+  nav a,
+  nav a:visited {
+    padding: 0.55rem 0.7rem;
+  }
+
   .bio,
+  .skills,
   .education {
     margin: 0 2rem 3rem;
   }
 
   .bioContainer,
+  .skillsContainer,
   .educationContainer {
     flex-direction: column;
     gap: 2rem;
@@ -283,6 +377,114 @@ li {
   text-align: center;
 }
 
+.servicesTitleContainer {
+  text-align: center;
+}
+
+.servicesTitle {
+  margin-bottom: 2rem;
+}
+
+.servicesContainer {
+  display: grid;
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.serviceCard {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 2rem;
+  min-height: 15rem;
+  padding: 2rem;
+  border: 2px solid #b0a990;
+  border-radius: 7px;
+  background-color: #b0a990;
+}
+
+.serviceImageContainer {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 12rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.serviceTextContainer {
+  grid-column: 1;
+  grid-row: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  text-align: left;
+}
+
+.serviceName {
+  margin: 0 0 0.75rem;
+  font-size: 1.4rem;
+}
+
+.serviceDescription {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.serviceCard:nth-child(even) .serviceImageContainer {
+  grid-column: 1;
+}
+
+.serviceCard:nth-child(even) .serviceTextContainer {
+  grid-column: 2;
+}
+
+.serviceImage {
+  display: block;
+  width: min(100%, 16rem);
+  max-width: 16rem;
+  height: auto;
+  object-fit: cover;
+}
+
+.contactLink {
+  max-width: 58rem;
+  margin: 4rem auto;
+  padding: 2.5rem 3rem;
+  border: 2px solid #7d7461;
+  border-radius: 7px;
+  background-color: #333;
+  box-shadow: 0 0.75rem 1.5rem rgba(51, 51, 51, 0.18);
+  color: #e5dcc5;
+  text-align: center;
+}
+
+.contactLinkTitle {
+  margin: 0 0 1rem;
+  color: #e5dcc5;
+}
+
+.contactLinkText {
+  max-width: 42rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contactLinkText a {
+  color: #e5dcc5;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  transition: color 0.2s ease;
+}
+
+.contactLinkText a:hover,
+.contactLinkText a:focus-visible {
+  color: #b0a990;
+}
+
 .reviewsTitle {
   text-align: center;
 }
@@ -323,13 +525,13 @@ li {
 }
 
 .emailSection {
-  margin: 0 auto 4rem;
+  margin: 0 auto;
   max-width: 58rem;
   padding: 0 2rem;
 }
 
 .emailTitle {
-  margin: 6rem 0 2rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -427,14 +629,6 @@ li {
   margin: 0;
 }
 
-.emailSection {
-  padding: 0 1rem;
-}
-
-.emailTitle {
-  margin-top: 4rem;
-}
-
 .emailContainer {
   padding: 1.5rem;
 }
@@ -447,4 +641,118 @@ li {
 .formMessage,
 .formSubmitButton {
   grid-column: auto;
+}
+
+@media (max-width: 768px) {
+  .servicesContainer {
+    padding: 0 2rem;
+  }
+
+  .serviceCard {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    min-height: 0;
+    padding: 1rem;
+  }
+
+  .serviceImageContainer {
+    grid-column: 2;
+    grid-row: 1;
+    min-height: 9rem;
+    padding: 0.5rem;
+  }
+
+  .serviceTextContainer {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    padding: 0.75rem;
+    text-align: center;
+  }
+
+  .serviceCard:nth-child(even) .serviceImageContainer {
+    grid-column: 1;
+  }
+
+  .serviceImage {
+    width: min(100%, 14rem);
+    max-width: 14rem;
+  }
+
+  .serviceName {
+    font-size: 1.1rem;
+  }
+
+  .contactLink {
+    margin: 3rem 2rem;
+    padding: 2rem 1.5rem;
+  }
+}
+
+.skillsCategories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skillsCategory {
+  text-align: center;
+}
+
+.skillsList {
+  display: block;
+  margin: 0;
+}
+
+.skillsList li {
+  display: list-item;
+  margin: 0.35rem 2rem;
+}
+
+.skills {
+  border-top: 1px solid #7d7461;
+  padding-top: 3rem;
+}
+
+.reachOut {
+  max-width: 58rem;
+  margin: 4rem auto;
+  padding: 2.5rem 3rem;
+  border: 2px solid #7d7461;
+  border-radius: 7px;
+  background-color: #333;
+  box-shadow: 0 0.75rem 1.5rem rgba(51, 51, 51, 0.18);
+  color: #e5dcc5;
+  text-align: center;
+}
+
+.reachOutTitle {
+  margin: 0 0 1rem;
+  color: #e5dcc5;
+}
+
+.reachOutMessage {
+  max-width: 42rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.reachOutMessage a {
+  color: #e5dcc5;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  transition: color 0.2s ease;
+}
+
+.reachOutMessage a:hover,
+.reachOutMessage a:focus-visible {
+  color: #b0a990;
+}
+
+.aboutTitle {
+  text-align: center;
+  margin-bottom: 2rem;
 }

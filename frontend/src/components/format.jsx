@@ -4,11 +4,11 @@ import Footer from "./footer.jsx";
 
 function Format() {
   return (
-    <>
+    <div className="appShell">
       <Header />
       <Outlet />
       <Footer />
-    </>
+    </div>
   )
 }
 

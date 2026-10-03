@@ -10,7 +10,7 @@ function Projects() {
 
         <div className="projectsContainer">
           {projects.map((project) => (
-            <article className="projectCard" key={project.name}>
+            <div className="projectCard" key={project.name}>
               <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <img
                   className="projectImage"
@@ -21,15 +21,21 @@ function Projects() {
                 <p className="projectDescription">{project.description}</p>
                 <p className="projectLanguages">{project.languages}</p>
               </a>
-            </article>
+            </div>
           ))}
         </div>
-        <h4 className="projectEndMessage">
-          Unfortunately this is the end of the list! But check in soon and there
-          is sure to be more projects of better quality as I learn and create
-          more!
-        </h4>
       </section>
+
+      <section className="reachOut">
+        <div className="reachOutTitleContainer">
+          <h2 className="reachOutTitle">Like what you see?</h2>
+        </div>
+        <p className="reachOutMessage">
+          Unfortunately this is the end of the list! 
+          But feel free to <a href="/contact">reach out</a> and we can create something together!
+        </p>
+      </section>
+
     </main>
   );
 }

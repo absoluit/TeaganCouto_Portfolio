@@ -1,5 +1,4 @@
 import { useState } from "react";
-import wave from "../assets/images/wave.png";
 import { featuredProjects } from "../data/constants.js";
 
 function Home() {
@@ -8,17 +7,17 @@ function Home() {
       <section className="introduction">
         <div className="intro_tit">
           <div className="title_text">
-            <h2 className="introTitle">Hey!!!</h2>
+            <h2 className="introTitle">Hello Weary Traveller</h2>
             <p className="introText">
-              What's going on! Before going any further, let me first thank you
-              for checking me out! Throughout this site, you will find a few of
-              my <a href="/projects">projects</a> and some information{" "}
+              I see you've stumbled upon my portfolio. I'm a passionate and
+              dedicated software developer with a love for creating innovative
+              and efficient solutions. Throughout this site, you will find a few
+              of my <a href="/projects">projects</a> and some information{" "}
               <a href="about">about me</a>. I hope you enjoy your time here and
               feel free to <a href="/contact">reach out</a> to me if you have
               any questions or comments!
             </p>
           </div>
-          <img className="introImage" src={wave} alt="wave" />
         </div>
       </section>
 
@@ -29,7 +28,7 @@ function Home() {
 
         <div className="featuredProjectsContainer">
           {featuredProjects.map((project) => (
-            <article className="featuredProjectCard" key={project.name}>
+            <div className="featuredProjectCard" key={project.name}>
               <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <img
                   className="featuredProjectImage"
@@ -43,8 +42,14 @@ function Home() {
                 </p>
                 <p className="featuredProjectLanguages">{project.languages}</p>
               </a>
-            </article>
+            </div>
           ))}
+        </div>
+
+        <div className="viewAllProjectsButtonContainer">
+          <a href="/projects" className="viewAllProjectsButton">
+            View All Projects
+          </a>
         </div>
       </section>
     </main>

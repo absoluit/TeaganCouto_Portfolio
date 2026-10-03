@@ -8,6 +8,10 @@ import crystalhopkins from "../assets/images/crystalhopkins.png";
 import github from "../assets/images/github.png";
 import linkedin from "../assets/images/linkedin.png";
 import gmail from "../assets/images/gmail.png";
+// import resume from "../assets/files/resume.pdf";
+import webdevelopment from "../assets/images/service_webdev.jpg";
+import backenddevelopment from "../assets/images/service_backenddev.webp";
+import fullstackdevelopment from "../assets/images/service_fullstackdev.jpg";
 
 export const featuredProjects = [
   {
@@ -73,7 +77,6 @@ export const reviews = [
     " Communication was easy, everything was delivered on time, and the attention to detail really stood out. I'd definitely work with him again.",
     image: danahopkins,
     languages: "Languages: HTML, CSS, JavaScript, React",
-    link: ""
   },
   {
     name: "Gary Hopkins",
@@ -83,7 +86,6 @@ export const reviews = [
     " You can tell he genuinely cares about the quality of his work",
     image: garyhopkins,
     languages: "Language: Java",
-    link: ""
   },
   {
     name: "Crystal Hopkins",
@@ -93,7 +95,6 @@ export const reviews = [
     " Highly recommend if you want someone who takes their work seriously.",
     image: crystalhopkins,
     languages: "Languages: HTML, CSS, JavaScript, React, SQL, Node.js, Express.js, MongoDB",
-    link: ""
   },
 ];
 
@@ -117,3 +118,21 @@ export const contactInfo = [
 			link: "https://github.com/absoluit",
 		}
 	];
+
+  export const services = [
+    {
+      name: "Web Development",
+      description: "I can create responsive and visually appealing websites using HTML, CSS, and JavaScript. I can also work with popular frameworks like React to build dynamic web applications.",
+      image: webdevelopment,
+    },
+    {
+      name: "Backend Development",
+      description: "I can develop server-side applications using Node.js and Express. I can also work with databases like MongoDB and SQL to store and retrieve data.",
+      image: backenddevelopment,
+    },
+    {
+      name: "Full-Stack Development",
+      description: "I can build complete web applications that include both frontend and backend components. I can also deploy applications to cloud platforms like AWS and Heroku.",
+      image: fullstackdevelopment,
+    }
+  ];
