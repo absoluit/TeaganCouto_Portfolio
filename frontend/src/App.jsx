@@ -4,7 +4,7 @@ import Home from "./pages/home.jsx";
 import About from "./pages/about.jsx";
 import Projects from "./pages/projects.jsx";
 import Services from "./pages/services.jsx";
-import References from "./pages/references.jsx";
+import Reviews from "./pages/reviews.jsx";
 import Contact from "./pages/contact.jsx";
 import NotFound from "./pages/notFound.jsx";
 import './css/style.css';
@@ -18,7 +18,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects />} />
           <Route path="services" element={<Services />} />
-          <Route path="references" element={<References />} />
+          <Route path="reviews" element={<Reviews />} />
           <Route path="contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Route>

@@ -1,13 +1,11 @@
-
-
 body {
-  background-color: #E5DCC5;
+  background-color: #e5dcc5;
   color: #333;
 }
 
 nav a {
   text-decoration: none;
-  }
+}
 
 a:visited {
   text-decoration: none;
@@ -27,18 +25,18 @@ ul {
   justify-content: space-between;
   list-style-type: none;
   margin-left: 50px;
-  margin-right: 50px; 
+  margin-right: 50px;
 }
 
 li {
-  border:2px solid #B0A990;
+  border: 2px solid #b0a990;
   border-radius: 7px;
-  background-color: #B0A990;
+  background-color: #b0a990;
 }
 .nav_line {
   border: 0;
   height: 1px;
-  background-color: #7D7461;
+  background-color: #7d7461;
   width: 100%;
   margin: 20px 0;
 }
@@ -57,16 +55,15 @@ li {
 .featuredProjectCard {
   padding: 1.5rem;
   text-align: center;
-  border: 2px solid #B0A990;
+  border: 2px solid #b0a990;
   border-radius: 7px;
-  background-color: #B0A990;
+  background-color: #b0a990;
 }
 
 .featuredProjectImage {
   width: 100%;
-  height: 12rem;
   object-fit: cover;
-  margin: 0 0 1rem  ;
+  margin: 0 0 1rem;
 }
 
 .featuredProjectName {
@@ -101,7 +98,7 @@ li {
   text-align: left;
   display: flex;
   margin-left: 11rem;
-  margin-right:6rem;
+  margin-right: 6rem;
 }
 
 .featuredProjectsTitle {
@@ -118,9 +115,9 @@ li {
 
 .introduction {
   text-align: center;
-  border: 2px solid #B0A990;
+  border: 2px solid #b0a990;
   border-radius: 7px;
-  background-color: #B0A990;
+  background-color: #b0a990;
   margin: 32px 96px;
 }
 .introImage {
@@ -153,9 +150,9 @@ li {
   align-items: center;
   gap: 4rem;
   padding: 2rem;
-  border: 2px solid #B0A990;
+  border: 2px solid #b0a990;
   border-radius: 7px;
-  background-color: #B0A990;
+  background-color: #b0a990;
 }
 
 .bioText,
@@ -205,10 +202,10 @@ li {
   width: 2.5rem;
   height: 2.5rem;
   object-fit: contain;
-} 
+}
 
 .education {
-  border-top: 1px solid #7D7461;
+  border-top: 1px solid #7d7461;
   padding-top: 3rem;
 }
 
@@ -218,31 +215,236 @@ li {
     margin: 0 2rem 3rem;
   }
 
-.bioContainer,
-.educationContainer {
-  flex-direction: column;
-  gap: 2rem;
-  text-align: center;
+  .bioContainer,
+  .educationContainer {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
   }
 
-.socialImages {
-  justify-content: center;
+  .socialImages {
+    justify-content: center;
   }
 
-.bioImage,
-.educationImage {
-  flex-basis: auto;
-}
+  .bioImage,
+  .educationImage {
+    flex-basis: auto;
+  }
 }
 
 .footerLine {
   border: 0;
   height: 1px;
-  background-color: #7D7461;
+  background-color: #7d7461;
   width: 100%;
   margin: 20px 0;
 }
 
 .footer {
   text-align: center;
+}
+
+.projectsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 0 6rem;
+}
+
+.projectCard {
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px solid #b0a990;
+  border-radius: 7px;
+  background-color: #b0a990;
+}
+
+.projectImage {
+  width: 100%;
+  object-fit: cover;
+  margin: 0 0 1rem;
+}
+
+.projectName {
+  margin: 0.75rem 0;
+}
+
+.projectDescription,
+.projectLanguages {
+  margin: 0.5rem 0;
+}
+
+.projectsTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projectEndMessage {
+  text-align: center;
+}
+
+.reviewsTitle {
+  text-align: center;
+}
+.reviewsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 0 6rem;
+}
+
+.reviewCard {
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px solid #b0a990;
+  border-radius: 7px;
+  background-color: #b0a990;
+  height: max-content;
+}
+
+.reviewImage {
+  width: 100%;
+  object-fit: cover;
+  margin: 0 0 1rem;
+}
+
+.reviewName {
+  margin: 0.75rem 0;
+}
+
+.reviewText,
+.reviewLanguages {
+  margin: 0.5rem 0;
+}
+
+.reviewTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.emailSection {
+  margin: 0 auto 4rem;
+  max-width: 58rem;
+  padding: 0 2rem;
+}
+
+.emailTitle {
+  margin: 6rem 0 2rem;
+  text-align: center;
+}
+
+.emailContainer {
+  padding: 2.5rem;
+  border: 2px solid #b0a990;
+  border-radius: 7px;
+  background-color: #b0a990;
+  box-shadow: 0 0.75rem 1.5rem rgba(51, 51, 51, 0.12);
+}
+
+.contactForm {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.formName,
+.formEmail,
+.formSubject,
+.formMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formSubject,
+.formMessage,
+.formSubmitButton {
+  grid-column: 1 / -1;
+}
+
+.contactForm label {
+  color: #333;
+  font-weight: 700;
+}
+
+.contactForm input,
+.contactForm textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border: 2px solid #7d7461;
+  border-radius: 5px;
+  background-color: #e5dcc5;
+  color: #333;
+  font: inherit;
+  padding: 0.8rem 1rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contactForm textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: #333;
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(229, 220, 197, 0.75);
+}
+
+.formSubmitButton {
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: #333;
+  color: #e5dcc5;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.85rem 1.25rem;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.formSubmitButton:hover,
+.formSubmitButton:focus-visible {
+  background-color: #e5dcc5;
+  color: #333;
+}
+
+.successMessage {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 2px solid #7d7461;
+  border-radius: 5px;
+  background-color: #e5dcc5;
+  text-align: center;
+}
+
+.successMessage p {
+  margin: 0;
+}
+
+.emailSection {
+  padding: 0 1rem;
+}
+
+.emailTitle {
+  margin-top: 4rem;
+}
+
+.emailContainer {
+  padding: 1.5rem;
+}
+
+.contactForm {
+  grid-template-columns: 1fr;
+}
+
+.formSubject,
+.formMessage,
+.formSubmitButton {
+  grid-column: auto;
 }
