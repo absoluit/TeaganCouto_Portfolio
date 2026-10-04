@@ -1,8 +1,18 @@
+import logo from "../assets/images/teagancouto_logo.png";
+
 function Header() {
   return (
     <header>
       <nav>
-        <ul>
+        {/* The logo stays visible while the main page links sit beside it. */}
+        <img
+          className="logo"
+          src= {logo}
+          alt="Teagan Couto Logo"
+        />
+
+        {/* These links match the routes configured in App.jsx. */}
+        <ul className="navText">
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/projects">Projects</a></li>

@@ -8,11 +8,11 @@ import crystalhopkins from "../assets/images/crystalhopkins.png";
 import github from "../assets/images/github.png";
 import linkedin from "../assets/images/linkedin.png";
 import gmail from "../assets/images/gmail.png";
-// import resume from "../assets/files/resume.pdf";
 import webdevelopment from "../assets/images/service_webdev.jpg";
 import backenddevelopment from "../assets/images/service_backenddev.webp";
 import fullstackdevelopment from "../assets/images/service_fullstackdev.jpg";
 
+// These projects are highlighted on the home page.
 export const featuredProjects = [
   {
     name: "Random Dice Game",
@@ -37,6 +37,7 @@ export const featuredProjects = [
   }
 ];
 
+// The complete project list is shown on the projects page.
 export const projects = [
   {
     name: "Random Dice Game",
@@ -68,6 +69,7 @@ export const projects = [
   }
 ];
 
+// Testimonials displayed on the reviews page.
 export const reviews = [
   {
     name: "Dana Hopkins",
@@ -98,6 +100,7 @@ export const reviews = [
   },
 ];
 
+// Contact cards and their destinations used throughout the portfolio.
 export const contactInfo = [
 		{
 			image: gmail,
@@ -119,7 +122,8 @@ export const contactInfo = [
 		}
 	];
 
-  export const services = [
+// Services offered, including the image and description for each card.
+export const services = [
     {
       name: "Web Development",
       description: "I can create responsive and visually appealing websites using HTML, CSS, and JavaScript. I can also work with popular frameworks like React to build dynamic web applications.",

@@ -3,6 +3,7 @@ import { projects } from "../data/constants.js";
 function Projects() {
   return (
     <main className="projects">
+      {/* Display every project from the shared project data. */}
       <section className="projectsSection">
         <div className="projectsTitleContainer">
           <h2 className="projectsTitle">Projects</h2>
@@ -26,6 +27,7 @@ function Projects() {
         </div>
       </section>
 
+      {/* A final call to action gives visitors an easy way to get in touch. */}
       <section className="reachOut">
         <div className="reachOutTitleContainer">
           <h2 className="reachOutTitle">Like what you see?</h2>

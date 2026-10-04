@@ -3,6 +3,7 @@ import { reviews } from "../data/constants.js";
 function Reviews() {
   return (
     <main className="reviews">
+      {/* Testimonials are rendered from the shared reviews data. */}
       <section className="reviewsSection">
         <div className="reviewsTitleContainer">
           <h2 className="reviewsTitle">Reviews</h2>

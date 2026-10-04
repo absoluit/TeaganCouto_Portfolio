@@ -18,6 +18,7 @@ header {
 }
 
 nav {
+  position: relative;
   max-width: 72rem;
   margin: 0 auto;
   padding: 0.75rem 1rem;
@@ -25,6 +26,21 @@ nav {
   border-radius: 7px;
   background-color: #b0a990;
   box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.12);
+}
+
+.logo {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  transform: translateY(-50%);
+  border: 2px solid #7d7461;
+  border-radius: 100%;
+  background-color: #e5dcc5;
+  object-fit: contain;
+  padding: 0.35rem;
 }
 
 nav ul {
@@ -36,6 +52,7 @@ nav ul {
   padding: 0;
   margin: 0;
   list-style: none;
+  min-height: 4.5rem;
 }
 
 nav li {
@@ -198,6 +215,7 @@ li {
 .title_text {
   flex: 1;
   text-align: center;
+  margin: 0 2rem;
 }
 
 .bio,
@@ -257,8 +275,9 @@ li {
 
 .portrait {
   width: 100%;
-  max-width: twentyrem;
+  max-width: 20rem;
   height: auto;
+  border-radius: 7px;
 }
 
 .centennialLogo {
@@ -268,7 +287,8 @@ li {
 }
 
 .socialImages {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 1.5rem;
 }
@@ -291,6 +311,13 @@ li {
 
   nav {
     padding: 0.5rem;
+  }
+
+  .logo {
+    left: 0.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0.25rem;
   }
 
   nav ul {
@@ -410,7 +437,6 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 12rem;
   padding: 1rem;
   border-radius: 5px;
 }
@@ -439,6 +465,10 @@ li {
 
 .serviceCard:nth-child(even) .serviceTextContainer {
   grid-column: 2;
+}
+
+.serviceCard:nth-child(odd) .serviceImageContainer {
+  padding-right: 1rem;
 }
 
 .serviceImage {

@@ -4,12 +4,13 @@ import { featuredProjects } from "../data/constants.js";
 function Home() {
   return (
     <main className="home">
+      {/* Welcome message introducing the portfolio. */}
       <section className="introduction">
         <div className="intro_tit">
           <div className="title_text">
-            <h2 className="introTitle">Hello Weary Traveller</h2>
+            <h2 className="introTitle">Hello !</h2>
             <p className="introText">
-              I see you've stumbled upon my portfolio. I'm a passionate and
+              Thank you for visiting my portfolio! I'm a passionate and
               dedicated software developer with a love for creating innovative
               and efficient solutions. Throughout this site, you will find a few
               of my <a href="/projects">projects</a> and some information{" "}
@@ -21,6 +22,7 @@ function Home() {
         </div>
       </section>
 
+      {/* A small selection of projects gives visitors a quick preview. */}
       <section className="featuredProjects">
         <div className="featuredProjectsTitleContainer">
           <h2 className="featuredProjectsTitle">Featured Projects</h2>
@@ -46,6 +48,7 @@ function Home() {
           ))}
         </div>
 
+        {/* Visitors can open the full project list from here. */}
         <div className="viewAllProjectsButtonContainer">
           <a href="/projects" className="viewAllProjectsButton">
             View All Projects

@@ -3,6 +3,7 @@ import { services } from "../data/constants.js";
 function Services() {
   return (
     <main className="services">
+      {/* Each service card is generated from the shared services data. */}
       <section className="servicesSection">
         <div className="servicesTitleContainer">
           <h2 className="servicesTitle">Services</h2>
@@ -28,6 +29,7 @@ function Services() {
         </div>
       </section>
 
+      {/* Invite interested visitors to continue to the contact page. */}
       <section className="contactLink">
         <div className="contactLinkTitleContainer">
           <h2 className="contactLinkTitle">Let's Work Together!</h2>

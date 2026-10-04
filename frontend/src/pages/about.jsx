@@ -1,22 +1,25 @@
-import portrait from "../assets/images/portrait.webp";
+import portrait from "../assets/images/portrait.jpeg";
 import linkedin from "../assets/images/linkedin.png";
 import github from "../assets/images/github.png";
 import gmail from "../assets/images/gmail.png";
+import resume from "../assets/images/resume.png";
 import centennial from "../assets/images/centennial.jpg";
 
 
 function About () {
   return (
     <main className="about">
+      {/* The About page introduces Teagan Couto (me) and provides background information. */}
       <div className="aboutTitle">
         <h2>About Me</h2>
       </div>
+      {/* Personal background and links to social profiles and resume. */}
       <section className="bio">
         <div className="bioContainer">
           <div className="bioText">
             <h2 className="bioTitle">Bite-sized Bio</h2>
             <p className="bioDescription">
-              Hello! My name is Teagan Couto and I am a software developer with a passion for creating innovative and user-friendly applications. 
+              Hey! My name is Teagan Couto and I'm a software/full-stack developer with a passion for creating innovative and user-friendly applications. 
               I have experience in a variety of programming languages and frameworks, 
               and I enjoy learning new technologies to stay up-to-date in the ever-evolving field of software development. 
               In my free time, I enjoy working on personal projects, 
@@ -44,6 +47,14 @@ function About () {
             <a href="mailto:teagan.couto@gmail.com">
               <img src={gmail} alt="Email Teagan" />
             </a>
+
+            <a 
+              href="https://drive.google.com/file/d/1D8dkCmh9hb_Y6xKFqalhK-aCfXRe7eOU/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={resume} alt="Resume" />
+            </a>
           </div>
           
           <div className="bioImage">
@@ -53,6 +64,7 @@ function About () {
       </section>
 
 
+      {/* Skills are grouped by the type of work or technology involved. */}
       <section className="skills">
         <div className="skillsContainer">
           <div className="skillsText">
@@ -108,6 +120,7 @@ function About () {
       </section>
 
 
+      {/* Education details round out the background section. */}
       <section className="education">
         <div className="educationContainer">
           <div className="educationText">

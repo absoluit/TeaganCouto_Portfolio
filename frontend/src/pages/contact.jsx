@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function Contact() {
+  // Keep the form fields together so they can be cleared after submission.
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -10,6 +11,7 @@ function Contact() {
 
   const [submitted, setSubmitted] = useState(false);
 
+  // Update only the field that the visitor is currently editing.
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -18,6 +20,7 @@ function Contact() {
     }));
   };
 
+  // This demo submission shows feedback, then resets the form after a short delay.
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted: ", formData);
@@ -30,6 +33,7 @@ function Contact() {
 
   return (
     <main className="contact">
+      {/* The contact form gives visitors a direct way to send a message. */}
       <section className="emailSection">
         <div className="emailTitleContainer">
           <h2 className="emailTitle">Email</h2>
