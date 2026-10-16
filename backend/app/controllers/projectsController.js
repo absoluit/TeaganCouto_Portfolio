@@ -1,6 +1,6 @@
-import { projectModel } from '../models/projects.model.js';
+import { projectModel } from '../models/projectsModel.js';
 
-module.export.addProject = async (req, res) => {
+export const addProject = async (req, res, next) => {
   try {
     let newProject = projectModel(req.body);
 
@@ -17,6 +17,41 @@ module.export.addProject = async (req, res) => {
   }
 };
 
-module.export.getAllProjects = async (req, res) => {
-  
-}
+export const getAllProjects = async (req, res) => {
+  try {
+    const projects = await projectModel.find();
+    console.log(projects);
+
+    res.json({
+      success: true,
+      message: 'Projects retrieved successfully',
+      data: projects
+    });
+    } catch (error) {
+      next(error);
+  }
+};
+
+export const getProjectById = async (req, res) => {
+  try {
+    
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const updateProject = async (req, res) => {
+  try {
+    
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const deleteProject = async (req, res) => {
+  try {
+
+  } catch (error) {
+    next(error);
+  }
+};

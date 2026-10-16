@@ -1,4 +1,4 @@
-import UsersModel from '../../models/users.model.js';
+import UsersModel from '../../models/usersModel.js';
 
 const users = [
   {id: 1, firstname: 'John', lastname: 'Doe', email: 'johndoe@example.com'},

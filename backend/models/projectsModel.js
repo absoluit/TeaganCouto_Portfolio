@@ -20,4 +20,4 @@ projectSchema.set('toJSON', {
 
 const projectModel = mongoose.model('Projects', projectSchema);
 
-export default mongoose.model('Projects', projectSchema);
+export default mongoose.model('Projects', projectModel);
