@@ -1,4 +1,4 @@
-import app from 'express';
+import app from './config/express.js';
 import http from 'http';
 import dotenv from 'dotenv';
 import { connectToMongoDB } from './config/db.js';

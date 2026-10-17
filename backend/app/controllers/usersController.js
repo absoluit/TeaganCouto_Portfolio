@@ -1,56 +1,91 @@
-import UsersModel from '../../models/usersModel.js';
+import usersModel from '../models/usersModel.js';
 
-const users = [
-  {id: 1, firstname: 'John', lastname: 'Doe', email: 'johndoe@example.com'},
-  {id: 2, firstname: 'Jane', lastname: 'Smith', email: 'janesmith@example.com'},
-  {id: 3, firstname: 'Alice', lastname: 'Johnson', email: 'alicejohnson@example.com'}
-];
-
-export async function getUsers(req, res, next) {
+export async function getAllUsers(req, res, next) {
   try {
-    res.status(200).json({
+    let users = await usersModel.find();
+    console.log(users);
+
+    res.json({
       success: true,
+      message: 'Users list retrieved successfully',
       data: users
     });
   } catch (error) {
+    console.log(error);
     next(error);
   }
 }
 
-export async function getUserById(req, res) {
-  const userId = parseInt(req.params.id);
-  const user = users.find(u => u.id === userId);
+export async function getUserById(req, res, next) {
+  try {
+    let userId = req.params.id;
+    let user = await usersModel.findById(userId);
 
-    if (!user) {
-      return res.status(404).json({
-        success: false,
-        message: 'User with ID ${userId} not found'
-      })
-    }
-
-    res.status(200).json({
+    res.json({
       success: true,
+      message: 'User retrieved successfully',
       data: user
     });
-  }
-
-export async function createUser(req, res) {
-  const { firstname, lastname, email } = req.body;
-
-  if (!firstname || !lastname || !email) {
-    return res.status(400).json({
-      success: false,
-      message: 'Missing required fields'
-    });
-  }
-
-  const newUser = {
-    id: users.length + 1,
-    firstname,
-    lastname,
-    email,
-    password: 'defaultpassword',
-    created: new Date(),
-    updated: new Date()
+  } catch (error) {
+    console.log(error);
+    next(error);
   }
 }
+
+export async function addUser(req, res, next) {
+  try {
+    let newUser = usersModel(req.body);
+
+    let user = await usersModel.create(newUser);
+    console.log(user);
+
+    res.json({
+      success: true,
+      message: 'User added successfully',
+      data: user
+    })
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+}
+
+export async function updateUser(req, res, next) {
+  try {
+    let userId = req.params.id;
+    let updatedUser = usersModel(req.body);
+    updatedUser._id = userId;
+
+    let result = await usersModel.updateOne({ _id: userId }, updatedUser);
+    console.log(result);
+
+    res.json({
+      success: true,
+      message: 'User updated successfully',
+    })
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+}
+
+export async function deleteUser(req, res, next) {
+  try {
+    let userId = req.params.id;
+
+    let result = await usersModel.deleteOne({ _id: userId })
+    console.log(result)
+
+    if (result.deletedCount > 0) {
+      res.json({
+        success: true,
+        message: 'User deleted successfully.'
+      });
+    } else {
+      throw new Error('User not found.');
+    }
+  } catch (error) {
+    console.log(error)
+    next(error);
+  }
+} 

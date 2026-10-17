@@ -1,10 +1,10 @@
-import { projectModel } from '../models/projectsModel.js';
+import projectsModel from '../models/projectsModel.js';
 
 export const addProject = async (req, res, next) => {
   try {
-    let newProject = projectModel(req.body);
+    let newProject = projectsModel(req.body);
 
-    let result = await projectModel.create(newProject);
+    let result = await projectsModel.create(newProject);
     console.log(result);
 
     res.json({
@@ -20,7 +20,7 @@ export const addProject = async (req, res, next) => {
 
 export const getAllProjects = async (req, res, next) => {
   try {
-    const projects = await projectModel.find();
+    const projects = await projectsModel.find();
     console.log(projects);
 
     res.json({
@@ -37,7 +37,7 @@ export const getAllProjects = async (req, res, next) => {
 export const getProjectById = async (req, res, next) => {
   try {
     let projectId = req.params.id;
-    let project = await projectsModel.findById({ _id: projectId });
+    let project = await projectsModel.findById(projectId);
 
     res.json({
       success:true,
@@ -56,7 +56,7 @@ export const updateProject = async (req, res, next) => {
     let updatedProject = projectsModel(req.body);
     updatedProject._id = projectId;
 
-    let result = await ProjectsModel.updateOne({ _id: projectId }, updatedProject);
+    let result = await projectsModel.updateOne({ _id: projectId }, updatedProject);
     console.log(result);
 
     res.json({
@@ -72,7 +72,7 @@ export const updateProject = async (req, res, next) => {
 export const deleteProject = async (req, res, next) => {
   try {
     let projectId = req.params.id;
-    let result = await projectsModel.deleteProject({ _id: projectId });
+    let result = await projectsModel.deleteOne({ _id: projectId });
     console.log(result);
 
     if (result.deletedCount > 0) {

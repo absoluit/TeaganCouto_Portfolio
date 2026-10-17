@@ -7,6 +7,17 @@ const userSchema = new mongoose.Schema({
   password: String,
   created: Date,
   updated: Date
+},
+{
+  collection: 'users'
+});
+
+userSchema.set('toJSON', {
+  virtuals: true,
+  versionKey: false,
+  transform: function (doc, ret) { 
+    delete ret._id 
+  }
 });
 
 const UserModel = mongoose.model('User', userSchema);
