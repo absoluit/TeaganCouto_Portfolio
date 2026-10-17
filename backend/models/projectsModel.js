@@ -18,6 +18,6 @@ projectSchema.set('toJSON', {
   }
 });
 
-const projectModel = mongoose.model('Projects', projectSchema);
+const projectsModel = mongoose.model('Projects', projectSchema);
 
-export default mongoose.model('Projects', projectModel);
+export default mongoose.model('Projects', projectsModel);

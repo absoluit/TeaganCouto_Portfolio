@@ -1,7 +1,15 @@
 import express from 'express';
-import { getProjects, createProject, updateProject, deleteProject } from '../controllers/projectsController.js';
+import projectsController from '../controllers/projectsController.js';
 
-app.use('/api/projects', projectsRouter);
+const router = express.Router();
+
+router.get('/', projectsController.getAllProjects);
+router.get('/:id', projectsController.getProjectById);
+
 router.post('/', projectsController.addProject);
+
+router.put('/:id', projectsController.updateProject);
+
+router.delete('/:id', projectsController.deleteProject);
 
 export default router;

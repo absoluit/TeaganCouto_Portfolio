@@ -27,10 +27,7 @@ function normalizePort(val) {
 }
 
 function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
-
-  console.log('App is running on http://localhost:'+bind); 
+  console.log('App is running on http://localhost:'+port); 
 }
 
 function onError(error) {
