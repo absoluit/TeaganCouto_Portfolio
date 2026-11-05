@@ -124,19 +124,19 @@ export const contactInfo = [
 
 // Services offered, including the image and description for each card.
 export const services = [
-    {
-      name: "Web Development",
-      description: "I can create responsive and visually appealing websites using HTML, CSS, and JavaScript. I can also work with popular frameworks like React to build dynamic web applications.",
-      image: webdevelopment,
-    },
-    {
-      name: "Backend Development",
-      description: "I can develop server-side applications using Node.js and Express. I can also work with databases like MongoDB and SQL to store and retrieve data.",
-      image: backenddevelopment,
-    },
-    {
-      name: "Full-Stack Development",
-      description: "I can build complete web applications that include both frontend and backend components. I can also deploy applications to cloud platforms like AWS and Heroku.",
-      image: fullstackdevelopment,
-    }
+  {
+    name: "Full-Stack Development",
+    description: "I can build complete web applications that include both frontend and backend components. I can also deploy applications to cloud platforms like AWS and Heroku.",
+    image: fullstackdevelopment,
+  },
+  {
+    name: "Backend Development",
+    description: "I can develop server-side applications using Node.js and Express. I can also work with databases like MongoDB and SQL to store and retrieve data.",
+    image: backenddevelopment,
+  },
+  {
+    name: "Web Development",
+    description: "I can create responsive and visually appealing websites using HTML, CSS, and JavaScript. I can also work with popular frameworks like React to build dynamic web applications.",
+    image: webdevelopment,
+  }
   ];

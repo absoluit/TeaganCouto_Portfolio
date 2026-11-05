@@ -5,11 +5,13 @@ function Header() {
     <header>
       <nav>
         {/* The logo stays visible while the main page links sit beside it. */}
-        <img
-          className="logo"
-          src= {logo}
-          alt="Teagan Couto Logo"
-        />
+        <a className="logoLink" href="/">
+          <img
+            className="logo"
+            src= {logo}
+            alt="Teagan Couto Logo"
+          />
+        </a>
 
         {/* These links match the routes configured in App.jsx. */}
         <ul className="navText">

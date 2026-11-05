@@ -100,15 +100,16 @@ function About () {
               <div className="skillsCategory">
                 <h3>Version Control Systems</h3>
                 <ul className="skillsList">
-                  <li>Git</li>
                   <li>GitHub</li>
                   <li>GitLab</li>
+                  <li>Git</li>
                 </ul>
               </div>
 
               <div className="skillsCategory">
                 <h3>Miscellanious</h3>
                 <ul className="skillsList">
+                  <li>Artificial Intelligence Usage</li>
                   <li>Database Design</li>
                   <li>UI/UX Design</li>
                   <li>Debugging</li>

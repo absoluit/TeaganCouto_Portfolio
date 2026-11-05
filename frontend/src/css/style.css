@@ -43,6 +43,16 @@ nav {
   padding: 0.35rem;
 }
 
+.logoLink {
+  padding: 0;
+  background-color: transparent;
+}
+
+.logoLink:hover,
+.logoLink:focus-visible {
+  background-color: transparent;
+}
+
 nav ul {
   display: flex;
   align-items: center;
@@ -80,6 +90,12 @@ nav a:focus-visible {
   color: #e5dcc5;
 }
 
+nav ul a:hover,
+nav ul a:focus-visible {
+  background-color: #333;
+  color: #e5dcc5;
+}
+
 a {
   text-decoration: underline;
   color: #333;
@@ -104,6 +120,7 @@ li {
   border-radius: 7px;
   background-color: #b0a990;
 }
+
 .nav_line {
   border: 0;
   height: 1px;
