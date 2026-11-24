@@ -1,4 +1,4 @@
-import portrait from "../assets/images/portrait.jpeg";
+import portrait from "../assets/images/portrait.jpg";
 import linkedin from "../assets/images/linkedin.png";
 import github from "../assets/images/github.png";
 import gmail from "../assets/images/gmail.png";
@@ -19,7 +19,7 @@ function About () {
           <div className="bioText">
             <h2 className="bioTitle">Bite-sized Bio</h2>
             <p className="bioDescription">
-              Hey! My name is Teagan Couto and I'm a software/full-stack developer with a passion for creating innovative and user-friendly applications. 
+              Hey! My name is Teagan Couto and I'm a Software Engineer & Full-stack Developer with a passion for creating innovative and user-friendly applications. 
               I have experience in a variety of programming languages and frameworks, 
               and I enjoy learning new technologies to stay up-to-date in the ever-evolving field of software development. 
               In my free time, I enjoy working on personal projects, 
